@@ -1,28 +1,49 @@
-angular.module('starter.controllers', [])
-
-.controller('DashCtrl', function($scope) {})
-
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+angular.module('bobo.controllers', [])
+.controller('LoadingCtrl', function($scope, $state) {
+  $scope.goFriend = function (){
+    $state.go('friend');
   }
+  setTimeout($scope.goFriend, 3000)
+
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('LoginCtrl', function($scope, $state) {
+  $scope.sendVibrationMsg = function () {
+    $state.go('loading');
+  }
+
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
-})
+.controller('MainCtrl', function($scope, $state) {
+  $scope.friends = [
+    {name: 'Ariel'},
+    {name: 'Kir'},
+    {name: 'Mak'},
+    {name: 'Spooky'},
+    {name: 'Webber'},
+    {name: 'Ivan'},
+    {name: 'Ray'}
+  ];
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
+  $scope.addMsg = function () {
+    // add msg
+  }
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+  $scope.goGroup = function () {
+    $state.go('group')
+  }
+
+  $scope.goFriend = function () {
+    $state.go('member')
+  }
+
+  $scope.selectFriend = function (friend) {
+    friend.selected = true
+  }
+
+  $scope.sendMsg = function () {
+    // send msg
+  }
+
+
+})

@@ -1,0 +1,6 @@
+<ion-view on-swipe-left="goGroup()" on-swipe-right="goFriend()" on-swipe-up="sendMsg()">
+  <ion-content class="padding">
+    <div id="circle_{{$index}}" class="circle" ng-repeat="friend in friends" ng-class="{selected: friend.selected}"
+     on-tap="selectFriend(friend)"> {{friend.name}} </div>
+  </ion-content>
+</ion-view>

@@ -9457,7 +9457,7 @@ IonicModule
  * @usage
  *
  * ```html
- * <body ng-app="starter">
+ * <body ng-app="bobo">
  *   <!-- The nav bar that will be updated as we navigate -->
  *   <ion-nav-bar class="bar-positive">
  *   </ion-nav-bar>
@@ -10048,7 +10048,7 @@ IonicModule
  * <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
  * <ion-radio ng-model="choice" ng-value="'C'">Choose C</ion-radio>
  * ```
- * 
+ *
  * @param {string=} name The name of the radio input.
  * @param {expression=} value The value of the radio input.
  * @param {boolean=} disabled The state of the radio input.
