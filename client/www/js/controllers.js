@@ -77,7 +77,7 @@ angular.module('bobo.controllers', [])
   }
 
   $scope.selectFriend = function (friend) {
-    friend.selected = true
+    friend.selected = !friend.selected
   }
 
   $scope.sendMsg = function () {

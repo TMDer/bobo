@@ -8077,16 +8077,17 @@ a.button {
   margin: 0 auto; }
 
 .random-circle {
-  -moz-transition: all 2s;
-  -o-transition: all 2s;
-  -ms-transition: all 2s;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   background: transparent;
   color: transparent;
   float: left; }
   .random-circle.selected {
-    color: #fff !important; }
+    color: #fff !important;
+    opacity: 0.5; }
 
 #logo {
   background: #F36497;
