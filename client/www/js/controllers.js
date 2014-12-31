@@ -25,14 +25,23 @@ angular.module('bobo.controllers', [])
 
 })
 
-.controller('LoginCtrl', function($scope, $state, LocalStorage) {
+.controller('LoginCtrl', function($scope, $state, $ionicLoading) {
+  $scope.user  = {name:"", phone:""};
   $scope.sendVibrationMsg = function () {
-    $state.go('loading');
+    alert('1')
+    // $ionicLoading.show({
+      // templateUrl: 'templates/loading.html'
+    // });
+    console.log($scope.user)
   }
   // setTimeout is temp code
-  setTimeout($scope.sendVibrationMsg, 3000);
+  // setTimeout($scope.sendVibrationMsg, 3000);
 
   navigator.notification.vibrate(2500);
+
+  $scope.closeLoading = function(){
+    $ionicLoading.hide()
+  }
 
 })
 
