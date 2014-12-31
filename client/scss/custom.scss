@@ -1,15 +1,13 @@
-/* Empty. Add your own CSS if you like */
-$logo-size: 400px;
-$logo-font-size: 50px;
-$loading-size: 400px;
-$loading-font-size: 50px;
+$breathe-size: 250px;
+$breathe-font-size: 30px;
+$logo-size: 300px;
+$logo-font-size: 35px;
+$loading-size: 300px;
+$loading-font-size: 35px;
 %circle {
   background: #F36497;
   border-radius: 50%;
   display: block;
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
   text-align: center;
   margin:0 auto;
 }
@@ -29,12 +27,16 @@ $loading-font-size: 50px;
 #logo {
   @extend %circle;
   background: #F36497;
-  color: #fff;
+  color: #000;
   font-size: $logo-font-size;
   height: $logo-size;
   line-height: $logo-size;
   width: $logo-size;
+
+  &:hover {
+    color: #fff;
   }
+}
 
 #loading {
   @extend %circle;
@@ -56,10 +58,10 @@ $loading-font-size: 50px;
 @include keyframes(breathe)
 {
   50%  {
-    font-size: 40px;
-    height: 350px;
-    line-height: 350px;
-    width: 350px;
+    font-size: $breathe-font-size;
+    height: $breathe-size;
+    line-height: $breathe-size;
+    width: $breathe-size;
   }
 }
 

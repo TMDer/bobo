@@ -42,14 +42,14 @@ angular.module('bobo.controllers', [])
 
     angular.forEach(allCircles, function(circle) {
       var tempDom = angular.element(circle);
-      circleSize = Math.random() * 120 + 50;
+      circleSize = Math.random() * 90 + 50;
       tempDom.css('color', '#000')
       tempDom.css('width', circleSize+'px')
       tempDom.css('height', circleSize+'px')
       tempDom.css('line-height', circleSize+'px')
       tempDom.css('background', $scope.getRandomColor(i%3))
-      tempDom.css('margin-top', Math.random() * 100 )
-      tempDom.css('margin-left', Math.random() * 50 )
+      tempDom.css('margin-top', Math.random() * 50 )
+      tempDom.css('margin-left', Math.random() * 25 )
       i++
     });
   }
