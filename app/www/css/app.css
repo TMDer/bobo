@@ -8064,7 +8064,7 @@ a.button {
   transition-duration: 0s; }
 
 /* Empty. Add your own CSS if you like */
-.circle {
+.random-circle, #logo, #loading {
   background: #F36497;
   border-radius: 50%;
   display: block;
@@ -8073,8 +8073,9 @@ a.button {
   width: 50px;
   text-align: center;
   margin: 0 auto; }
-  .circle.selected {
-    color: #fff; }
+
+.random-circle.selected {
+  color: #fff; }
 
 #logo {
   background: #F36497;
@@ -8085,21 +8086,57 @@ a.button {
   width: 400px; }
 
 #loading {
+  -o-animation: breathe;
+  -moz-animation: breathe;
   -webkit-animation: breathe;
+  animation: breathe;
+  -o-animation-delay: 0s;
+  -moz-animation-delay: 0s;
   -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -o-animation-duration: 5s;
+  -moz-animation-duration: 5s;
   -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -o-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+  -moz-animation-direction: alternate;
   -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -o-animation-play-state: running;
+  -moz-animation-play-state: running;
   -webkit-animation-play-state: running;
+  animation-play-state: running;
   background: translate;
   color: #000;
   font-size: 50px;
   height: 400px;
   line-height: 400px;
   width: 400px;
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 102, 0.1), inset 0px 0px 46px 0px rgba(51, 51, 102, 0.1); }
+  /*box-shadow: 0px 0px 10px 0px rgba(20%,20%,40%, 0.1),inset 0px 0px 46px 0px rgba(20%,20%,40%,0.1);*/ }
 
+@-o-keyframes breathe {
+  50% {
+    font-size: 40px;
+    height: 350px;
+    line-height: 350px;
+    width: 350px; } }
+@-moz-keyframes breathe {
+  50% {
+    font-size: 40px;
+    height: 350px;
+    line-height: 350px;
+    width: 350px; } }
 @-webkit-keyframes breathe {
+  50% {
+    font-size: 40px;
+    height: 350px;
+    line-height: 350px;
+    width: 350px; } }
+@-keyframes breathe {
   50% {
     font-size: 40px;
     height: 350px;

@@ -31,7 +31,7 @@ angular.module('bobo.controllers', [])
   }
 
   $scope.changeCircleStyle = function() {
-    allCircles = document.querySelectorAll('.random')
+    allCircles = document.querySelectorAll('.random-circle')
     angular.forEach(allCircles, function(circle) {
       tempDom = angular.element(circle);
       circleSize = Math.random() * 100 + 50;
