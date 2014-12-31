@@ -36,27 +36,35 @@ angular.module('bobo.controllers', [])
   }
 
   $scope.changeCircleStyle = function() {
-    allCircles = document.querySelectorAll('.random-circle')
+    var allCircles = document.querySelectorAll('.random-circle')
+    var i = 0
+
     angular.forEach(allCircles, function(circle) {
-      tempDom = angular.element(circle);
+      var tempDom = angular.element(circle);
       circleSize = Math.random() * 120 + 50;
       tempDom.css('color', '#000')
       tempDom.css('width', circleSize+'px')
       tempDom.css('height', circleSize+'px')
       tempDom.css('line-height', circleSize+'px')
-      tempDom.css('background', $scope.getRandomColor())
+      tempDom.css('background', $scope.getRandomColor(i%3))
       tempDom.css('margin-top', Math.random() * 100 )
       tempDom.css('margin-left', Math.random() * 50 )
+      i++
     });
   }
 
-  $scope.getRandomColor = function() {
-    var letters = '0123456789ABCDEF'.split('');
+  $scope.getRandomColor = function(randomNum) {
     var color = '#';
-    for (var i = 0; i < 4; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
+    var letters = '0123456789ABCDEF'.split('');
+    var letterIndex = 0;
+
+    for (var i = 0; i < 6; i++ ) {
+        letterIndex = Math.floor(Math.random() * 15);
+        if( i == randomNum || i == randomNum+1) {
+          letterIndex = 15;
+        }
+        color += letters[letterIndex];
     }
-    color += "ff"
     return color;
   }
 
