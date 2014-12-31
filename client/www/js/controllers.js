@@ -37,7 +37,7 @@ angular.module('bobo.controllers', [])
   // setTimeout is temp code
   // setTimeout($scope.sendVibrationMsg, 3000);
 
-  navigator.notification.vibrate(2500);
+  // navigator.notification.vibrate(2500);
 
   $scope.closeLoading = function(){
     $ionicLoading.hide()
