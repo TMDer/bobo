@@ -1,25 +1,4 @@
-/* Empty. Add your own CSS if you like */
-#logo {
-  border-radius: 50%;
-  background: #f55  ;
-  color: #fff;
-  font-size: 50px;
-  height: 400px;
-  line-height: 400px;
-  width: 400px;
-  text-align: center;
-  margin:60px auto;
-}
-
-#loading {
-  border-radius: 50%;
-  background: translate  ;
-  color: #000;
-  font-size: 50px;
-  height: 400px;
-  line-height: 400px;
-  width: 400px;
-  text-align: center;
-  margin:60px auto;
-  box-shadow: 0px 0px 10px 0px rgba(20%,20%,40%, 0.1),inset 0px 0px 46px 0px rgba(20%,20%,40%,0.1)
-}
+/*
+  Empty. Add your own CSS if you like
+  if you want to use sass in /app/scss/custom
+*/

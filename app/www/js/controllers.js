@@ -3,7 +3,6 @@ angular.module('bobo.controllers', [])
   $scope.goFriend = function (){
     $state.go('friend');
   }
-  setTimeout($scope.goFriend, 3000)
 
 })
 
@@ -11,6 +10,8 @@ angular.module('bobo.controllers', [])
   $scope.sendVibrationMsg = function () {
     $state.go('loading');
   }
+  // setTimeout is temp code
+  setTimeout($scope.sendVibrationMsg, 3000)
 
 })
 
@@ -29,6 +30,28 @@ angular.module('bobo.controllers', [])
     // add msg
   }
 
+  $scope.changeCircleStyle = function() {
+    allCircles = document.querySelectorAll('.random')
+    angular.forEach(allCircles, function(circle) {
+      tempDom = angular.element(circle);
+      circleSize = Math.random() * 100 + 50;
+      tempDom.css('width', circleSize+'px')
+      tempDom.css('height', circleSize+'px')
+      tempDom.css('line-height', circleSize+'px')
+      tempDom.css('background', $scope.getRandomColor())
+      tempDom.css('margin-left', Math.random() * 300 )
+    });
+  }
+
+  $scope.getRandomColor = function() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
   $scope.goGroup = function () {
     $state.go('group')
   }
@@ -44,6 +67,8 @@ angular.module('bobo.controllers', [])
   $scope.sendMsg = function () {
     // send msg
   }
+
+  setTimeout($scope.changeCircleStyle, 100);
 
 
 })
