@@ -3,6 +3,7 @@ $logo-size: 400px;
 $logo-font-size: 50px;
 $loading-size: 400px;
 $loading-font-size: 50px;
+
 .circle {
   background: #F36497;
   border-radius: 50%;
@@ -21,7 +22,7 @@ $loading-font-size: 50px;
 #logo {
   background: #F36497;
   color: #fff;
-  font-size: $logo-font-size
+  font-size: $logo-font-size;
   height: $logo-size;
   line-height: $logo-size;
   width: $logo-size;
