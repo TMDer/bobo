@@ -8063,6 +8063,8 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+/* transform */
+/* animation*/
 /* Empty. Add your own CSS if you like */
 .random-circle, #logo, #loading {
   background: #F36497;
@@ -8074,8 +8076,17 @@ a.button {
   text-align: center;
   margin: 0 auto; }
 
-.random-circle.selected {
-  color: #fff; }
+.random-circle {
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  -ms-transition: all 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  background: transparent;
+  color: transparent;
+  float: left; }
+  .random-circle.selected {
+    color: #fff !important; }
 
 #logo {
   background: #F36497;

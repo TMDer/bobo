@@ -1,3 +1,13 @@
+/* transform */
+
+@mixin transition($transitions) {
+     -moz-transition: $transitions;
+       -o-transition: $transitions;
+      -ms-transition: $transitions;
+  -webkit-transition: $transitions;
+          transition: $transitions;
+}
+/* animation*/
 @mixin keyframes($name) {
   @-o-keyframes $name { @content };
   @-moz-keyframes $name { @content };

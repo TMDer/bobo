@@ -15,9 +15,13 @@ $loading-font-size: 50px;
 }
 
 .random-circle {
+  @include transition(all 2s);
   @extend %circle;
+  background: transparent;
+  color: transparent;
+  float: left;
   &.selected {
-    color: #fff;
+    color: #fff !important;
   }
 }
 
@@ -35,7 +39,7 @@ $loading-font-size: 50px;
   @extend %circle;
   @include animation(breathe);
   @include animation-delay(0s);
-  @include animation-duration( 5s);
+  @include animation-duration(5s);
   @include animation-iteration-count(infinite);
   @include animation-direction(alternate);
   @include animation-play-state(running);
