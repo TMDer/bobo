@@ -8082,6 +8082,7 @@ a.button {
   color: transparent;
   float: left; }
   .random-circle.selected {
+    border: 1.5px solid #333;
     color: #fff !important;
     opacity: 0.5; }
 
@@ -8125,8 +8126,7 @@ a.button {
   font-size: 35px;
   height: 300px;
   line-height: 300px;
-  width: 300px;
-  /*box-shadow: 0px 0px 10px 0px rgba(20%,20%,40%, 0.1),inset 0px 0px 46px 0px rgba(20%,20%,40%,0.1);*/ }
+  width: 300px; }
 
 @-o-keyframes breathe {
   50% {

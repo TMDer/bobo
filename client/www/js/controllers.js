@@ -11,9 +11,6 @@ angular.module('bobo.controllers', [])
   $scope.sendVibrationMsg = function () {
     $state.go('loading');
   }
-  // setTimeout is temp code
-  setTimeout($scope.sendVibrationMsg, 3000)
-
 })
 
 .controller('MainCtrl', function($scope, $state) {
@@ -74,7 +71,7 @@ angular.module('bobo.controllers', [])
   }
 
   $scope.goFriend = function () {
-    $state.go('member')
+    $state.go('friend')
   }
 
   $scope.selectFriend = function (friend) {
