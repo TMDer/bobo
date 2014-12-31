@@ -1,6 +1,7 @@
 angular.module('bobo.controllers', [])
 .controller('LoadingCtrl', function($scope, $state) {
-  $scope.goFriend = function (){
+  $scope.cancelLoading = function (){
+    // goFriend is temp
     $state.go('friend');
   }
 
