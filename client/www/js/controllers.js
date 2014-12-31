@@ -1,4 +1,22 @@
 angular.module('bobo.controllers', [])
+
+.factory('$localstorage', ['$window', function($window) {
+  return {
+    set: function(key, value) {
+      $window.localStorage[key] = value;
+    },
+    get: function(key, defaultValue) {
+      return $window.localStorage[key] || defaultValue;
+    },
+    setObject: function(key, value) {
+      $window.localStorage[key] = JSON.stringify(value);
+    },
+    getObject: function(key) {
+      return JSON.parse($window.localStorage[key] || '{}');
+    }
+  }
+}])
+
 .controller('LoadingCtrl', function($scope, $state) {
   $scope.cancelLoading = function (){
     // goFriend is temp
@@ -7,12 +25,12 @@ angular.module('bobo.controllers', [])
 
 })
 
-.controller('LoginCtrl', function($scope, $state) {
+.controller('LoginCtrl', function($scope, $state, LocalStorage) {
   $scope.sendVibrationMsg = function () {
     $state.go('loading');
   }
   // setTimeout is temp code
-  setTimeout($scope.sendVibrationMsg, 3000)
+  setTimeout($scope.sendVibrationMsg, 3000);
 
 })
 
