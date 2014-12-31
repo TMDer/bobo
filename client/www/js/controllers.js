@@ -32,6 +32,8 @@ angular.module('bobo.controllers', [])
   // setTimeout is temp code
   setTimeout($scope.sendVibrationMsg, 3000);
 
+  navigator.notification.vibrate(2500);
+
 })
 
 .controller('MainCtrl', function($scope, $state) {
